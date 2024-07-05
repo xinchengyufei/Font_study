@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link rel="stylesheet" href="reg.css">
+    <title>Reg</title>
+  </head>
+
+  <body>
+    <!-- 最外围 -->
+    <div class="container">
+      <!-- 上层文字 -->
+      <div class="top">
+        <div class="account">创建新帐户</div>
+        <div class="label">快速又简便。</div>
+      </div>
+
+      <!-- 中间的输入表单 -->
+       <div class="middle">
+        <form action="#">
+          <div class="name">
+            <div class="last_name">
+              <input type="text" name="last_name" placeholder="姓">
+            </div>
+            <div class="first_name">
+              <input type="text" name="first_name" placeholder="名">
+            </div> 
+          </div>
+          <div class="phone">
+            <input type="text" name="phone_email" placeholder="手机号或邮箱">
+          </div>
+          <div class="pwd">
+            <input type="password" name="pwd" placeholder="创建密码">
+          </div>
+
+          <div class="select">
+            <div class="select_top">
+              <div>出生日期</div>
+              <div class="picture_doubt"></div>
+            </div>
+
+            <div class="select_date">
+              <select class="year" name="year">
+                <option>2024</option>
+                <option>2025</option>
+              </select>
+              <select class="month" name="month">
+                <option>1</option>
+                <option>2</option>
+              </select>
+              <select class="day" name="day">
+                <option>25</option>
+                <option>26</option>
+              </select>
+            </div>
+
+            <div class="select_top">
+              <div>性别</div>
+              <div class="picture_doubt"></div>
+            </div>
+
+            <div class="select_sex">
+              <div class="female border">
+                <span>女</span>
+                <input type="radio" name="sex" value="Female">
+              </div>
+              <div class="male border">
+                <span>男</span>
+                <input type="radio" name="sex" value="male">
+              </div>
+              <div class="sex_define border">
+                <span>自定义</span>
+                <input type="radio" name="sex" value="define">
+              </div>
+  
+            </div>
+
+            <div class="agreement">
+              点击注册，即表示你同意接受我们的<a href="#">条款</a>、<a href="#">隐私权政策</a>和<a href="#"> Cookie 政策</a>。你可能会收到我们的短信通知，并可以随时退订。
+            </div>
+          </div>
+
+          <div class="click_submit">
+            <input type="submit" value="注册">
+          </div>
+
+          <div class="click_link">
+            <a href="#">有账户了？</a>
+          </div>
+
+        </form>
+       </div>
+    </div>
+    
+    <script>
+
+    </script>
+  </body>
+</html>
