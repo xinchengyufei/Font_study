@@ -23,48 +23,45 @@
           <div class="name">
             <div class="last_name">
               <input type="text" name="last_name" placeholder="姓">
+              <div class="picture_mark" style="position: absolute;top:-5px;left:116px"></div>
             </div>
             <div class="first_name">
               <input type="text" name="first_name" placeholder="名">
+              <div class="picture_mark" style="position: absolute;top:-5px;right:-2px"></div>
             </div> 
           </div>
+
           <div class="phone">
             <input type="text" name="phone_email" placeholder="手机号或邮箱">
+            <div class="picture_mark" style="position: absolute;top:0px;right:-2px"></div>
           </div>
+
           <div class="pwd">
             <input type="password" name="pwd" placeholder="创建密码">
+            <div class="picture_mark" style="position: absolute;top:0px;right:-2px"></div>
           </div>
 
           <div class="select">
-            <div class="select_top">
-              <div>出生日期</div>
-              <div class="picture_doubt"></div>
+            <div class="select_top" >
+              <div >出生日期</div>
+              <div class="picture_doubt" style="position: absolute; left: 40px;"></div>
             </div>
 
             <div class="select_date">
-              <select class="year" name="year">
-                <option>2024</option>
-                <option>2025</option>
-              </select>
-              <select class="month" name="month">
-                <option>1</option>
-                <option>2</option>
-              </select>
-              <select class="day" name="day">
-                <option>25</option>
-                <option>26</option>
-              </select>
+              <select class="year" name="year"></select>
+              <select class="month" name="month"></select>
+              <select class="day" name="day"></select>
             </div>
 
             <div class="select_top">
               <div>性别</div>
-              <div class="picture_doubt"></div>
+              <div class="picture_doubt" style="position: absolute; left: 17px;"></div>
             </div>
 
             <div class="select_sex">
               <div class="female border">
                 <span>女</span>
-                <input type="radio" name="sex" value="Female">
+                <input type="radio" name="sex" value="Female" checked>
               </div>
               <div class="male border">
                 <span>男</span>
@@ -74,7 +71,9 @@
                 <span>自定义</span>
                 <input type="radio" name="sex" value="define">
               </div>
-  
+            </div>
+            <div id="sex_input">
+              <input type="text" name="sex" placeholder="请输入你的性别">
             </div>
 
             <div class="agreement">
@@ -94,7 +93,7 @@
        </div>
     </div>
     
-    <script>
+    <script src="./reg.js">
 
     </script>
   </body>
