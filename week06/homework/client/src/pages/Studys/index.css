@@ -1,0 +1,23 @@
+.content {
+    padding: 16px;
+
+    .add-item {
+        margin-bottom: 20px;
+        margin-right: 10px;
+
+        .add-button {
+            margin-right: 15px;
+        }
+    }
+
+    .to-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;        
+    }
+
+    .text-time {
+        margin-right: 20px;
+    }
+
+}

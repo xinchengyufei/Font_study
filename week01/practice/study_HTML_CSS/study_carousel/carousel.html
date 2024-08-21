@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+
+        ul {
+            list-style: none;
+            position: absolute;
+            padding: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 800px;
+            height: 200px;
+        }
+
+        ul:hover{
+            cursor: pointer;
+        }
+
+        li {
+            float: left;
+            position: absolute;
+            left: 0;
+            transition: 0.4s;
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul class="banner"></ul>
+
+    <script>
+        // 动态生成轮播图
+        window.onload = function() {
+
+            let timer = setInterval(get_pre, 1500);
+            let arr = new Array();
+            let ul = document.querySelector("ul");
+
+            for(let i = 1; i <= 5; i++){
+                let li = document.createElement("li");
+                let img = document.createElement("img");
+                img.src = "./images/carousel" + i +".png";
+                img.style.width = "400px";
+                img.style.height = "200px"; 
+                li.appendChild(img);
+                ul.appendChild(li);
+                arr.push(li);
+                arr[arr.length - 1].style.left = "0px";
+            }
+            let len = arr.length - 1;
+            arr[len -2].style.left = "0px";
+            arr[len -1].style.zIndex = 100;
+            arr[len -1].style.left = "200px";
+            arr[len -1].style.transform = "scale(1.3)";
+            arr[len].style.left = "400px";
+
+
+            function get_next() {
+                let give_up = arr[len];
+                arr.pop();
+                arr.unshift(give_up);
+                for(let i = 0; i < arr.length; i++){
+                    arr[i].style.zIndex = i;
+                    arr[i].style.transform = "scale(1)";
+                }
+                arr[len -2].style.left = "0px";
+                arr[len -1].style.zIndex = 100;
+                arr[len -1].style.left = "200px";
+                arr[len -1].style.transform = "scale(1.3)";
+                arr[len -1].style.opacity = 1;
+                arr[len].style.left = "400px";
+            }
+
+            function get_pre() {
+                let give_up = arr[0];
+                arr.shift();
+                arr.push(give_up);
+                for(let i = 0; i < arr.length; i++){
+                    arr[i].style.zIndex = i;
+                    arr[i].style.transform = "scale(1)";
+                }
+                arr[len -2].style.left = "0px";
+                arr[len -1].style.zIndex = 100;
+                arr[len -1].style.left = "200px";
+                arr[len -1].style.transform = "scale(1.3)";
+                arr[len -1].style.opacity = 1;
+                arr[len].style.left = "400px";
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

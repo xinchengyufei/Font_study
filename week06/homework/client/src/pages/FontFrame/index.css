@@ -1,0 +1,11 @@
+.content {
+    padding: 16px;
+    width: 100%;
+
+    .chart-area {
+        margin: 100px auto;
+        width: 92%;
+        height: 400px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+}

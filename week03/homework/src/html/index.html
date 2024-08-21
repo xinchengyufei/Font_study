@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>力扣 (LeetCode) 全球极客挚爱的技术成长平台</title>
+  </head>
+
+  <body>
+    <!-- 
+      页面位于浏览器的版心位置，margin 30px auto 0;
+      画面分为上下两部分:上部分为导航区,下部分为数据为数据展示区
+      下部分分为两个区域：表头和内容
+    -->
+    <div class="page-container">
+      <!-- 上部分导航 -->
+      <div class="top-nav">
+        <!-- 类别导航 -->
+        <div class="nav-classify">
+          <div class="item light-active">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"   fill="currentColor" style="color: rgba(38, 38, 38, 0.75);">
+              <path fill-rule="evenodd" d="M20 10v9a2 2 0 01-2 2H6a2 2 0 01-2-2v-9a2 2 0 01-2-2V6a2 2 0 012-2h16a2 2 0 012 2v2a2 2 0 01-2 2zM6 10v9h12v-9H6zM4 6v2h16V6H4zm6 7.5a1 1 0 110-2h4a1 1 0 110 2h-4z" clip-rule="evenodd">
+              </path>
+            </svg>
+            全部题目
+          </div>
+          <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="color: #ffa116;">
+              <path fill-rule="evenodd" d="M5.828 1.793a1 1 0 011.415 0L10.45 5h8.05a1 1 0 011 1v2.895a3.502 3.502 0 010 6.71V18.5a1 1 0 01-1 1H10V21a1 1 0 01-1 1H4a1 1 0 01-1-1v-5a1 1 0 011-1h5a1 1 0 011 1v1.5h7.5v-1.895a3.502 3.502 0 010-6.71V7h-6.98l-3.277 3.278a1 1 0 01-1.415 0L2.293 6.743a1 1 0 010-1.415l3.535-3.535zm.708 2.121L4.414 6.036l2.122 2.12 2.12-2.12-2.12-2.122zM18.5 10.75a1.5 1.5 0 100 3 1.5 1.5 0 000-3zM5 20v-3h3v3H5z" clip-rule="evenodd">
+            </path></svg>
+            <div class="item-icon"></div>
+            算法
+          </div>
+          <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="color: rgb(0 122 255);">
+              <path fill-rule="evenodd" d="M18 7.658c-1.466.66-3.611 1.009-6 1.009-2.388 0-4.534-.35-6-1.01V12c0 .052.429.392 1.358.702 1.192.398 2.85.631 4.642.631 1.791 0 3.45-.233 4.642-.63.93-.311 1.358-.65 1.358-.703V7.658zm1.64-3.426c.22.183.36.46.36.768v13.667C20 20.809 16.433 22 12 22s-8-1.19-8-3.333V5c0-.309.14-.585.36-.768C5.373 2.789 8.412 2 12 2s6.627.789 7.64 2.232zM18 14.328c-1.463.658-3.605 1.005-6 1.005s-4.536-.347-6-1.005v4.339c0 .052.429.392 1.358.702C8.55 19.767 10.208 20 12 20c1.791 0 3.45-.233 4.642-.631.93-.31 1.358-.65 1.358-.702v-4.339zM6.005 5.345v-.021c.013 0 .054.046.164.133.25.197.66.4 1.197.579 1.195.398 2.854.632 4.634.632 1.78 0 3.439-.234 4.634-.632.537-.18.947-.382 1.197-.579.11-.086.15-.132.164-.133v.021c-.013 0-.054-.047-.164-.133-.25-.197-.66-.4-1.197-.579C15.439 4.234 13.78 4 12 4c-1.78 0-3.439.234-4.634.632-.537.18-.947.382-1.197.579-.11.086-.15.132-.164.133z" clip-rule="evenodd">
+            </path></svg>
+            数据库
+          </div>
+          <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="color: rgb(45 181 93);">
+              <path d="M8 2a1 1 0 011 1v1.7h.877c.307 0 .565.107.783.325.218.218.325.476.325.783v.027c0 .306-.107.559-.323.767l-.002.002a1.062 1.062 0 01-.783.325H7.225c-.55 0-1.02.193-1.405.577l-.001.002a1.947 1.947 0 00-.576 1.403c0 .38.09.72.276 1.014.185.292.46.531.816.719.12.063.385.153.775.27.396.12.936.27 1.62.452 1.01.289 1.73.654 2.178 1.085h.001c.636.603.965 1.483.965 2.667 0 1.164-.408 2.155-1.228 2.984A4.15 4.15 0 019 19.126V21a1 1 0 11-2 0v-1.67H4.094c-.296 0-.55-.107-.769-.326l-.002-.002A1.017 1.017 0 013 18.235v-.027c0-.306.107-.564.325-.782.22-.22.473-.326.77-.326h3.704c.55 0 1.021-.193 1.405-.577.384-.384.577-.855.577-1.405 0-.363-.091-.687-.278-.965-.187-.278-.463-.5-.818-.674h-.002a7.78 7.78 0 00-.728-.24c-.395-.12-.948-.28-1.659-.48-1-.297-1.72-.67-2.18-1.111-.637-.63-.966-1.534-.966-2.737 0-1.163.409-2.15 1.228-2.97C5.12 5.2 5.992 4.791 7 4.714V3a1 1 0 011-1zM14.496 9.532a1 1 0 10-.992 1.736l5.48 3.132-5.48 3.132a1 1 0 10.992 1.736l5.48-3.132c1.344-.767 1.344-2.705 0-3.473l-5.48-3.131z">
+              </path>
+            </svg>
+            Shell
+          </div>
+          <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="color: rgb(175 82 222);">
+              <path fill-rule="evenodd" d="M16.664 3.48C16.02 2.905 15 3.363 15 4.226v3.546c0 .863 1.02 1.32 1.664.748l1.995-1.774a1 1 0 000-1.494l-1.995-1.774zM4 9a4 4 0 014-4h5a1 1 0 110 2H8a2 2 0 100 4h8a4 4 0 110 8h-6a1 1 0 010-2h6a2 2 0 000-4H8a4 4 0 01-4-4zm4 10.773v-3.546c0-.863-1.02-1.32-1.664-.748L4.34 17.253a1 1 0 000 1.494l1.995 1.773c.645.574 1.664.116 1.664-.747z" clip-rule="evenodd">
+              </path>
+            </svg>
+            多线程
+          </div>
+        </div>
+
+        <!-- 难度选择 -->
+        <div class="select">
+          <div class="select-list">
+            <div class="list-btn">
+              <button class="btn" type="button">
+                题单
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M4.929 7.913l7.078 7.057 7.064-7.057a1 1 0 111.414 1.414l-7.77 7.764a1 1 0 01-1.415 0L3.515 9.328a1 1 0 011.414-1.414z" clip-rule="evenodd">
+                  </path>
+                </svg>
+              </button>
+              <div class="btn-wrap-content">
+                <div class="wrap-content">
+                  <div>动态规划</div>
+                </div>
+                <div class="wrap-content">
+                  <div>字符串</div>
+                </div>
+                <div class="wrap-content">
+                  <div>数组</div>
+                </div>
+                <div class="wrap-content">
+                  <div>程序员面试金典（第 6 版）</div>
+                </div>
+                <div class="wrap-content">
+                  <div>递归</div>
+                </div>
+                <div class="wrap-content">
+                  <div>🔥  LeetCode 热题 HOT 100</div>
+                </div>
+                <div class="wrap-content">
+                  <div>💙  LeetCode 精选数据库 70 题</div>
+                </div>
+                <div class="wrap-content">
+                  <div>🧡 LeetCode 精选算法 200 题</div>
+                </div>
+                <div class="wrap-content">
+                  <div>🏆 力扣杯 - 竞赛合集</div>
+                </div>
+                <div class="wrap-content">
+                  <div>🐧 腾讯精选练习 50 题</div>
+                </div>
+                <div class="wrap-content">
+                  <div>👨‍💻 LeetCode 精选 TOP 面试题</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="select-list">
+            <div class="list-btn">
+              <button class="btn" type="button">
+                难度
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M4.929 7.913l7.078 7.057 7.064-7.057a1 1 0 111.414 1.414l-7.77 7.764a1 1 0 01-1.415 0L3.515 9.328a1 1 0 011.414-1.414z" clip-rule="evenodd">
+                  </path>
+                </svg>
+              </button>
+              <div class="btn-wrap-content" style="width: 124px">
+                <div class="wrap-content">
+                  <div id="EASY" style="color: rgb(0 175 155);">简单</div>
+                </div>
+                <div class="wrap-content">
+                  <div id="MEDIUM" style="color: rgb(255 184 0);">中等</div>
+                </div>
+                <div class="wrap-content">
+                  <div id="HARD" style="color: rgb(255 45 85);">困难</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 下面区域内容 -->
+      <div class="bottom-show">
+        <!-- 表头 -->
+        <div class="bottom-head">
+          <div class="question-title">
+            题目
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z">
+              </path>
+            </svg>
+          </div>
+          <div class="question-solve">
+            题解
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z">
+              </path>
+            </svg>
+          </div>
+          <div class="question-pass">
+            通过率
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z">
+              </path>
+            </svg>
+          </div>
+          <div class="question-level">
+            难度
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.695 9.378L12.83 3.769a1.137 1.137 0 00-.06-.054c-.489-.404-1.249-.377-1.7.06L5.303 9.381a.51.51 0 00-.16.366c0 .297.27.539.602.539h12.512a.64.64 0 00.411-.146.501.501 0 00.028-.762zM12.77 20.285c.021-.017.042-.035.062-.054l5.863-5.609a.5.5 0 00-.028-.762.64.64 0 00-.41-.146H5.743c-.332 0-.601.242-.601.54a.51.51 0 00.16.365l5.769 5.606c.45.437 1.21.464 1.698.06z">
+              </path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="content">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

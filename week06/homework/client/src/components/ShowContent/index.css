@@ -1,0 +1,18 @@
+.bottom-content {
+    min-height: 280px;
+
+    .add-item {
+        margin-bottom: 20px;
+        margin-right: 10px;
+    }
+
+    .anti-pagination {
+        margin-top: 20px;
+    }
+
+    .to-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;        
+    }
+}

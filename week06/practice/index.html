@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      .common-w {
+        width: 1080px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .header {
+        height: 60px;
+        position: relative;
+        background-color: #fff;
+        display: flex;
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          width: 100%;
+          background-color: #fff;
+          height: 60px;
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+        }
+        .common-w {
+          display: flex;
+          position: relative;
+
+          .logo {
+            width: 154px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            img {
+              width: 100%;
+            }
+          }
+          .top-nav {
+            width: 80px;
+            font-size: 14px;
+            color: #72727b;
+            line-height: 60px;
+            text-align: center;
+          }
+          .top-nav-c {
+            width: 60px;
+            a {
+              color: #72727b;
+            }
+            .classify-content {
+              position: absolute;
+              top: 60px;
+              width: 1080px;
+              z-index: -2;
+              min-height: 200px;
+              left: 0;
+              transition: all 0.3s ease-in-out;
+              background-color: #fbfbfc;
+              box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+              transform: translateY(-300px) translateZ(0);
+            }
+            &:hover {
+              .classify-content {
+                transform: translateY(0) translateZ(0);
+              }
+            }
+          }
+          .line {
+            position: absolute;
+            height: 3px;
+            width: 32px;
+            bottom: 0;
+            background: #f86442;
+            left: 56px;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="common-w">
+        <a href="#" class="logo">
+          <img src="https://imagev2.xmcdn.com/storages/3777-audiofreehighqps/49/07/GMCoOSMH3Kb7AAAPQgH_va2X.png" alt="" />
+        </a>
+        <a href="#" class="top-nav">发现</a>
+        <div class="top-nav top-nav-c">
+          <a href="#">分类</a>
+          <div class="classify-content"></div>
+        </div>
+        <a href="#" class="top-nav">电台</a>
+        <span class="line"></span>
+      </div>
+    </header>
+    <script>
+      const $ = (tag) => document.querySelector(tag);
+      const $all = (tag) => document.querySelectorAll(tag);
+
+      const TopNav = (() => {
+        const aTopNav = $all(".top-nav");
+        const oLine = $(".line");
+        const iLineWidth = oLine.offsetWidth;
+        return {
+          init() {
+            // !初始位置
+            this.iInitPos = this.operaLineFn(aTopNav[0]);
+            // !事件绑定
+            this.bindEventFn();
+            // !定位初始位置后，再加过度样式
+            setTimeout(() => (oLine.style.transition = "left 0.3s"));
+          },
+
+          bindEventFn() {
+            aTopNav.forEach((item) => {
+              item.addEventListener("mouseover", this.operaLineFn.bind(this, item));
+              item.addEventListener("mouseout", () => (oLine.style.left = this.iInitPos + "px"));
+            });
+          },
+
+          operaLineFn(item) {
+            const iOffset = (item.offsetWidth - iLineWidth) / 2;
+            const iTarget = item.offsetLeft + iOffset;
+            oLine.style.left = iTarget + "px";
+            return iTarget;
+          },
+        };
+      })();
+
+      TopNav.init();
+    </script>
+  </body>
+</html>

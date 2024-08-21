@@ -1,0 +1,17 @@
+p {
+    color: red;
+}
+
+.title {
+    color: aquamarine;
+    font-size: 18px;
+}
+
+.wrap {
+    background-color: blue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

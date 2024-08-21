@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 定义下拉按钮样式 */
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* 容器 <div> - 放置下拉内容 */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        /* 下拉内容 (默认隐藏) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        /* 鼠标悬停时显示下拉内容 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        /* 链接样式 */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        /* 鼠标悬停时更改下拉链接的背景颜色 */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .animated-underline {
+        position: relative;
+        display: inline-block;
+        color: #000;
+        text-decoration: none;
+        overflow: hidden;
+        }
+
+        .animated-underline::before,
+        .animated-underline::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background-color: #000;
+        transition: width 0.3s ease-in-out;
+        }
+
+        .animated-underline::before {
+        left: 0;
+        width: 50%;
+        right: 50%;
+        }
+
+        .animated-underline::after {
+        right: 0;
+        width: 50%;
+        left: 50%;
+        }
+
+        .animated-underline:hover::before,
+        .animated-underline:hover::after {
+        width: 0;
+        }
+
+        .animated-underline:hover::before {
+        transition-delay: 0.3s;
+        }
+
+        .animated-underline:hover::after {
+        transition-delay: 0s;
+        }
+
+        .animated-underline:hover::before,
+        .animated-underline:hover::after {
+        width: 50%;
+        }
+
+        .search-suggestions {
+            position: absolute;
+            display: none;
+            background-color: white;
+            border: 1px solid #ccc;
+            width: 200px;
+            z-index: 1;
+        }
+
+        .search-suggestions ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .search-suggestions li {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .search-suggestions li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropbtn">下拉菜单</button>
+        <div class="dropdown-content">
+          <a href="#">链接1</a>
+          <a href="#">链接2</a>
+          <a href="#">链接3</a>
+        </div>
+      </div>
+
+      <input type="text" id="searchInput" placeholder="Search...">
+        <div id="hotSearches" class="search-suggestions">
+            <ul>
+                <li>Hot search 1</li>
+                <li>Hot search 2</li>
+                <li>Hot search 3</li>
+                <!-- 更多热门搜索项 -->
+            </ul>
+        </div>
+
+      <a href="#" class="animated-underline">Hover Me</a>
+</body>
+</html>

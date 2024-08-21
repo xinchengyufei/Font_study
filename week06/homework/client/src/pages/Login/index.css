@@ -1,0 +1,28 @@
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #f0f2f5; 
+    
+    .cardstyle {
+        width: 400px;
+        padding: 20px;
+    
+        .page-title {
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .button-submit {
+            width: 100%;
+        }
+    }
+
+    .tail-text{
+        cursor: pointer;
+        text-align: right;
+    }
+}
